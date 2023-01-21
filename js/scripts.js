@@ -64,16 +64,16 @@ class Calculator {
         this.updateScreen(operationValue, operation, current, previous);
         break;
       case "DEL":
-        this.processDelOperator();
+        this.processDelOperator(); //linha 119
         break;
       case "CE":
-        this.processClearCurrentOperator();
+        this.processClearCurrentOperator(); //linha 125
         break;
       case "C":
-        this.processClearOperator();
+        this.processClearOperator(); //linha 130
         break;
       case "=":
-        this.processEqualOperator();
+        this.processEqualOperator(); //linha 136
         break;
       default:
         return;
@@ -88,7 +88,7 @@ class Calculator {
     previous = null
   ) {
     if (operationValue === null) {
-      // Append number to current value
+      // Anexar número ao valor atual
       this.currentOperationText.innerText += this.currentOperation;
     } else {
       //Verifique se o valor é zero, se for apenas adicione o valor atual
@@ -142,7 +142,7 @@ class Calculator {
 
 const calc = new Calculator(previousOperationText, currentOperationText);
 
-////eventos para fazer funcionar
+//eventos para fazer funcionar
 buttons.forEach((btn) => {
   btn.addEventListener("click", (e) => {
     const value = e.target.innerText;
